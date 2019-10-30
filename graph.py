@@ -59,6 +59,7 @@ def euler_circuit(graph, actual="Boston", path=[]):
         if v not in path:
             actual = v
         if len(path) == len(graph):
-            break
+            print(path)
+            return path
         else:
             euler_circuit(graph, actual, path)

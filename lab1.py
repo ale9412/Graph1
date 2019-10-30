@@ -1,12 +1,12 @@
 import argparse, random, pprint
-from graph import make_graph_obj, check_path, is_connected
+from graph import make_graph_obj, check_path, is_connected, euler_circuit
 
 parser = argparse.ArgumentParser(description='Graph processing')
 parser.add_argument('graph_data', metavar='file', type=str, help='Path to file containing the graph edges')
 parser.add_argument('--route',metavar="route-file", type=str, required=False, help='Path to file containing a route to test')
 parser.add_argument('--dpf-check', action="store_true", required=False, help='Check if the graph is fully connected')
 parser.add_argument('--show', action="store_true", required=False, help='Check graph structure')
-parser.add_argument('--ecircuit', action="store_true", required=False, help='Find the path that includes')
+parser.add_argument('--circuit', action="store_true", required=False, help='Find the circuit that includes exactly once all the edges of the graph')
 
 
 args = parser.parse_args()
@@ -14,6 +14,7 @@ graph_edges = args.graph_data
 route  = args.route
 check = args.dpf_check
 show = args.show
+circuit = args.circuit
 
 airports, graph_obj = make_graph_obj(graph_edges)
 
@@ -33,3 +34,8 @@ if check:
 
 if show:
     pprint.pprint(graph_obj)
+
+
+if circuit:
+    euler_circuit(graph_obj)
+    
