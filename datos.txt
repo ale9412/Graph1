@@ -1,0 +1,32 @@
+St. Louis,Miami
+St. Louis,San Diego
+San Francisco,Portland
+San Francisco,Seattle
+St. Louis,Chicago
+San Diego,Chicago
+San Diego,San Francisco
+San Diego,Minneapolis
+Tulsa,Dallas
+Phoenix,Cleveland
+Phoenix,Denver
+Phoenix,Dallas
+Chicago,New York
+Chicago,Los Angeles
+Miami,New York
+Miami,Philadelfia
+Miami,Denver
+Boston,Atlanta
+Dallas,Cleveland
+San Diego,Boston
+San Diego,Portland
+San Diego,Seattle
+Tulsa,New York
+Dallas,Albuquerque
+Philadelfia,Atlanta
+Denver,Minneapolis
+Denver,Cleveland
+Albuquerque,Atlanta
+Minneapolis,Portland
+Los Angeles,Seattle
+San Francisco,Cleveland
+Seattle,Portland
