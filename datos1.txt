@@ -1,3 +1,3 @@
 St. Louis,San Diego
 San Diego,Chicago
-California,Rusia
+California,Seattle

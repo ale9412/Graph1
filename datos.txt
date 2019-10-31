@@ -30,6 +30,3 @@ Minneapolis,Portland
 Los Angeles,Seattle
 San Francisco,Cleveland
 Seattle,Portland
-San Diego,Atlanta
-New York,St. Louis
-Minneapolis,Phoenix

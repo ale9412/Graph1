@@ -5,7 +5,7 @@ import argparse, random, pprint
 from graph import make_graph_obj, check_path, is_connected, euler_circuit
 
 parser = argparse.ArgumentParser(description='Graph processing')
-parser.add_argument('graph_data', metavar='file', type=str, help='Path to file containing the graph edges')
+parser.add_argument('graph_data', metavar='edges_file', type=str, help='Path to file containing the graph edges')
 parser.add_argument('--route',metavar="route-file", type=str, required=False, help='Path to file containing a route to test')
 parser.add_argument('--dpf-check', action="store_true", required=False, help='Check if the graph is fully connected')
 parser.add_argument('--show', action="store_true", required=False, help='Check graph structure')
@@ -75,13 +75,17 @@ If you want to add this connections to the current edges file and check afterwar
     python lab1.py datos.txt --add-con
 Then check if it is an euler circuit with:
     python lab1.py datos.txt --circuit
-"""%", ".join(odds)
+"""
 
 
 
 # Exercise 6
 
-""" For this exercise we have to guarantee that every vertex in the graph has a pair number of vertices attached to it
-except New York and Atlanta for this we make the following connections:
+""" It is not possible in this graph to find an euler path, for this to be possible we have 
+to guarantee that every vertex in the graph has a pair number of vertices attached to itexcept 
+New York and Atlanta which are the start and the end of the path, for this we make the following connections:
+
     1. San Diego -> Phoenix
-    2. St. Louis -> Minneapolis """
+    2. St. Louis -> Minneapolis 
+
+That will guarantee that our graph includes an euler path that start in New York and finish in Atlanta"""
