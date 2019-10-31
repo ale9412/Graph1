@@ -51,15 +51,16 @@ def is_connected(graph, vertex):
     for v in vertices:
         if graph[v]["labeled"] == False:
             is_connected(graph, v)
+    for airport in graph:
+        if graph[airport]["labeled"] == False:
+            return False
+            break
+    else:
+        return True
 
-def euler_circuit(graph, actual="Boston", path=[]):
-    path.append(actual)
-    vertices = graph[actual]["vertices"]
-    for v in vertices:
-        if v not in path:
-            actual = v
-        if len(path) == len(graph):
-            print(path)
-            return path
-        else:
-            euler_circuit(graph, actual, path)
+def euler_circuit(graph):
+    for node in graph:
+        if len(graph[node]["vertices"]) % 2 != 0:
+            return False
+    return True
+

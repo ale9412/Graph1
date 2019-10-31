@@ -6,7 +6,7 @@ parser.add_argument('graph_data', metavar='file', type=str, help='Path to file c
 parser.add_argument('--route',metavar="route-file", type=str, required=False, help='Path to file containing a route to test')
 parser.add_argument('--dpf-check', action="store_true", required=False, help='Check if the graph is fully connected')
 parser.add_argument('--show', action="store_true", required=False, help='Check graph structure')
-parser.add_argument('--circuit', action="store_true", required=False, help='Find the circuit that includes exactly once all the edges of the graph')
+parser.add_argument('--circuit', action="store_true", required=False, help='Determine if exist an euler circuit this option has implicit the --dpf-check')
 
 
 args = parser.parse_args()
@@ -18,24 +18,30 @@ circuit = args.circuit
 
 airports, graph_obj = make_graph_obj(graph_edges)
 
+def check_connected():
+    vertex = random.choice(airports)
+    connected = is_connected(graph_obj, vertex)
+    if connected: 
+        return True
+    else: 
+        return False
 
 if route:
     print("\nPath exist:",check_path(graph_obj, route))
 
 if check:
-    vertex = random.choice(airports)
-    is_connected(graph_obj, vertex)
-    for airport in airports:
-        if graph_obj[airport]["labeled"] == False:
-            print("\nThe graphic is not connected" )
-            break
-    else:
-        print("\nThe graphic is connected")
+    if check_connected(): print("The graph is connected")
+    else: print("The graph is not connected")
 
 if show:
     pprint.pprint(graph_obj)
 
 
 if circuit:
-    euler_circuit(graph_obj)
-    
+    connected = check_connected()
+    if euler_circuit(graph_obj) and connected:
+        print("\nIt is possible to find an euler circuit")
+    else:
+        print("\nIt is not possible to find an euler circuit")
+
+print([graph_obj[v]["name"] for v in graph_obj if len(graph_obj[v]["vertices"]) % 2 != 0])
