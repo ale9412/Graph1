@@ -8,10 +8,10 @@ usage: lab1.py [-h] [--route route-file] [--dpf-check] [--show] [--ecircuit] fil
 
 **Graph processing**
 
-⋅⋅* positional arguments:
+..* positional arguments:
   file                Path to file containing the graph edges
 
-⋅⋅* optional arguments:
+..* optional arguments:
   -h, --help          show this help message and exit
   --route route-file  Path to file containing a route to test
   --dpf-check         Check if the graph is fully connected
