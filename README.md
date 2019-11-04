@@ -9,7 +9,7 @@ Program for simple graphic analysis
 **Graph processing**
 
 * positional arguments:
-  1. edges_file             *Tabspace**Tabspace*Path to file containing the graph edges
+  1. edges_file             *Tabspace*Path to file containing the graph edges
 
 * optional arguments:
   1. ```-h, --help```              *Tabspace**Tabspace* Show this help message and exit
