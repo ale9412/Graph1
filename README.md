@@ -9,11 +9,11 @@ Program for simple graphic analysis
 **Graph processing**
 
 * positional arguments:
-  1. edges_file                     Path to file containing the graph edges
+  1. edges_file             *Tabspace**Tabspace*Path to file containing the graph edges
 
 * optional arguments:
-  1. ```-h, --help```               Show this help message and exit
-  2. ```--route <route-file>```     Path to file containing a route to test
-  3. ```--dpf-check```              Check if the graph is fully connected
-  4. ```--show```                   Check graph structure
-  5. ```--ecircuit```               Find the path that includes
+  1. ```-h, --help```              *Tabspace**Tabspace* Show this help message and exit
+  2. ```--route <route-file>```     *Tabspace**Tabspace*Path to file containing a route to test
+  3. ```--dpf-check```              *Tabspace**Tabspace*Check if the graph is fully connected
+  4. ```--show```                   *Tabspace**Tabspace*Check graph structure
+  5. ```--ecircuit```               *Tabspace**Tabspace*Find the path that includes
