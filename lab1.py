@@ -65,14 +65,14 @@ if circuit:
 odds = [graph_obj[v]["name"] for v in graph_obj if len(graph_obj[v]["vertices"]) % 2 != 0]
 
 """ To make the graph to contain an euler circuit we have to modify the conexion of the airports 
-describes in the variable odds(make a print of this var to see)
-"For this we add the following conexions:
-    1. San Diego -> Atlanta
-    2. New York -> St. Louis
-    3. Minneapolis -> Phoenix
+    describes in the variable odds(make a print of this var to see)
+    For this we add the following conexions:
+        1. San Diego -> Atlanta
+        2. New York -> St. Louis
+        3. Minneapolis -> Phoenix
 
-If you want to add this connections to the current edges file and check afterwards run the following command in the command line:
-    python lab1.py datos.txt --add-con
+If you want to add this connections to the current edges file and check afterwards, run the following command in the command line:
+    python lab1.py datos.txt --add-conn
 Then check if it is an euler circuit with:
     python lab1.py datos.txt --circuit
 """
