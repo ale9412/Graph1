@@ -16,4 +16,7 @@ Program for simple graphic analysis
   2. ```--route <route-file>```    Path to file containing a route to test
   3. ```--dpf-check```             Check if the graph is fully connected
   4. ```--show```                  Check graph structure
-  5. ```--ecircuit```              Find the path that includes
+  5. ```--circuit```               Determine if exist an euler circuit this option has implicit the --dpf-check
+  6. ```--add-conn```              Add new connections
+           
+          
